@@ -1,11 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Hideable  = ({hide, children}) => {
-    if(hide) {
-        return null;
-    }
-    return ( children );
-}
+const Hideable  = ({hide, children}) => (hide) ? null : ( children );
 
 Hideable.propTypes = {
     hide: PropTypes.bool.isRequired,
